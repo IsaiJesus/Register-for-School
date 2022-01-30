@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Isai Jesús"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,900;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/cbta39.ico">
+    <title>Ficha de pre registro al CBTa 39</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-nav">
+            <nav class="nav">
+                <h1>Ficha de <span class="title">pre registro</span> del CBTa 39.</h1>
+                <a href="http://cbta39.com.mx/">
+                    <img src="img/cbta39.png" alt="CBTa 39" width="90">
+                </a>
+            </nav>
+        </div>
+        <section class="container-bienvenida">
+            <h2>Llena el siguiente formulario para obtener tu ficha de pre registro al CBTa 39.</h2>
+            <h4>En caso de no contar con algún dato, rellenarlo con "No cuento con esa información" o con un 0.</h4>
+            <img src="img/pre-registro.png" alt="Pre registro" width="350">
+        </section>
+        <div class="container-form">
+            <form action="save.php" method="POST" class="form">
+                <div class="form-order">
+                    <p>Datos del alumno:</p>
+                    <div class="form-input">
+                        <input type="text" name="appat" placeholder="Apellido paterno">
+                        <input type="text" name="apmat" placeholder="Apellido materno">
+                        <input type="text" name="nombres" placeholder="Nombre(s)">
+                    </div>
+                    <label for="sexo">Sexo:</label>
+                    <div class="form-input">
+                        <select name="sexo" id="sexo">
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                        </select>
+                    </div>
+                    <div class="form-input">
+                        <input name="edad" type="number" placeholder="Edad"> 
+                    </div>
+                    <div class="form-input">
+                        <input name="calle_num" type="text" placeholder="Calle y número">
+                        <input name="colonia" type="text" placeholder="Colonia">
+                        <input name="municipio" type="text" placeholder="Municipio">
+                        <input name="cp" type="number" placeholder="Código postal">
+                    </div>
+                    <label for="beca">¿Cuentas con alguna beca?</label>
+                    <div class="form-input">
+                        <input id="beca" name="beca" type="text" placeholder="Nombre o tipo de beca">
+                    </div>
+                    <label for="olimpiada">Tu ficha es gratis si tu promedio es igual o mayor a 9.5, o si has participado en alguna olimpiada del conocimiento:</label>
+                    <div class="form-input">
+                        <select name="ficha_gratis" id="olimpiada">
+                            <option value="si">Sí he participado</option>
+                            <option value="no">No he participado</option>
+                        </select>
+                    </div>
+                    <p>Datos de casa:</p>
+                    <div class="form-input">
+                        <input name="tel_alumno" type="number" placeholder="Teléfono del alumno">
+                        <input name="email" type="email" placeholder="Correo electrónico">
+                    </div>
+                    <label for="integrantes">Número de integrantes de la familia:</label>
+                    <div class="form-input">
+                        <input name="num_fam" id="integrantes" type="number" placeholder="Número de integrantes">
+                    </div>
+                    <div class="form-input">
+                        <input name="tel_casa" type="number" placeholder="Teléfono de casa">
+                        <input name="tel_tutor" type="number" placeholder="Teléfono del tutor">
+                    </div>
+                    <div class="form-input">
+                        <input name="trab_alumno" type="text" placeholder="Ocupación del alumno">
+                        <input name="trab_madre" type="text" placeholder="Ocupación de la madre">
+                        <input name="trab_padre" type="text" placeholder="Ocupación del padre"> 
+                    </div>
+                    <label for="transporte">Gasto en transporte al CBTa 39:</label>
+                    <div class="form-input">
+                        <input name="transporte" id="transporte" type="number" placeholder="Gasto en pesos"> 
+                    </div>
+                    <p>Datos de escuela de procedencia:</p>
+                    <div class="form-input">
+                        <input name="esc_ant" type="text" placeholder="Nombre de la escuela"> 
+                        <input name="ubi_esc" type="text" placeholder="Ubicación de la escuela"> 
+                        <input name="prom_sec" type="number" placeholder="Promedio de secundaria">
+                    </div>
+                    <p>Carreras deseadas por relevancia:</p>
+                    <div class="form-input">
+                        <select name="opcion_1">
+                            <option value="programacion" selected>Programación</option>
+                            <option value="soporte y mantenimiento">Soporte y mantenimiento</option>
+                            <option value="rehabilitacion">Rehabilitación</option>
+                            <option value="apicultura">Apicultura</option>
+                            <option value="administracion">Administración</option>
+                            <option value="agropecuario">Agropecuario</option>
+                        </select>
+                        <select name="opcion_2">
+                            <option value="programacion">Programación</option>
+                            <option value="soporte y mantenimiento">Soporte y mantenimiento</option>
+                            <option value="rehabilitacion">Rehabilitación</option>
+                            <option value="apicultura">Apicultura</option>
+                            <option value="administracion" selected>Administración</option>
+                            <option value="agropecuario">Agropecuario</option>
+                        </select>
+                        <select name="opcion_3">
+                            <option value="programacion">Programación</option>
+                            <option value="soporte y mantenimiento">Soporte y mantenimiento</option>
+                            <option value="rehabilitacion">Rehabilitación</option>
+                            <option value="apicultura">Apicultura</option>
+                            <option value="administracion">Administración</option>
+                            <option value="agropecuario" selected>Agropecuario</option>
+                        </select>
+                    </div>
+                    <p>Fecha y hora para obtener ficha en CBTa 39:</p>
+                    <div class="form-input">
+                        <input name="fecha" type="date">
+                        <input name="hora" type="time">
+                    </div>
+                    <div class="container-buttons">
+                        <input name="save" id="submit" type="submit" value="Enviar y descargar PDF" class="button-submit">
+                        <!--<button class="button-download">Descargar PDF</button>-->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
